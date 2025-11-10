@@ -77,12 +77,11 @@ const runAction = () => {
   //Disclaimer that this program is a modified version of action-electron-builder
 
   log(
-    "This is a modified version of action-electron-builder by samuelmeuli, spcifically modified for Quasar Framework to work"
+    "This is a modified version of action-quasar-builder by vedaprakashms, updated to work with modern systems"
   );
 
-  // TODO: Deprecated option, remove in v2.0. `electron-builder` always requires a `package.json` in
-  // the same directory as the Electron app, so the `package_root` option should be used instead
-  const appRoot = getInput("app_root") || pkgRoot;
+  // Always requires a `package.json` in the same directory as the Electron app, so the `package_root` option should be used instead
+  const appRoot = pkgRoot;
 
   const pkgJsonPath = join(pkgRoot, "package.json");
   const pkgLockPath = join(pkgRoot, "package-lock.json");
@@ -114,6 +113,8 @@ const runAction = () => {
 
   log(`Installing dependencies using ${useNpm ? "NPM" : "Yarn"}…`);
   run(useNpm ? "npm install" : "yarn", pkgRoot);
+    log(`Installing quasar using ${useNpm ? "NPM" : "Yarn"}…`);
+  run(useNpm ? "npm i -g @quasar/cli" : "yarn global add @quasar/cli", pkgRoot);
 
   // Run NPM build script if it exists
   if (skipBuild) {
@@ -139,7 +140,7 @@ const runAction = () => {
   for (let i = 0; i < maxAttempts; i += 1) {
     try {
       run(
-        `${useNpm ? "npx --no-install" : "yarn run"} ${cmd} --${platform} ${
+        `${cmd} --${platform} ${
           release ? "--publish always" : ""
         } ${args}`,
         appRoot

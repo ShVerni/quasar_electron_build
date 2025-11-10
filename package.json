@@ -1,19 +1,19 @@
 {
   "name": "quasar_electron_build",
   "version": "1.0.0",
-  "description": "a electron builder action for quasar framwork, this wrapper can support both quasar cli and vue cli with quasar.",
+  "description": "a electron builder action for quasar framework, this wrapper can support both quasar cli and vue cli with quasar.",
   "main": "index.js",
-  "repository": "https://github.com/vedaprakashms/",
-  "author": "Vedaprakash M S <vedaprakashms@gmail.com>",
+  "repository": "https://github.com/ShVerni/",
+  "author": "Sam Groveman <SamGroveman@outlook.com>",
   "license": "MIT",
   "private": false,
   "devDependencies": {
     "@samuelmeuli/eslint-config": "^6.0.0",
     "@samuelmeuli/prettier-config": "^2.0.1",
-    "eslint": "6.8.0",
-    "eslint-config-airbnb-base": "14.1.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-import": "^2.20.2",
-    "prettier": "^2.0.4"
+    "eslint": "8.28.0",
+		"eslint-config-airbnb-base": "15.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"prettier": "^2.7.1"
   }
 }

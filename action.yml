@@ -1,5 +1,5 @@
 name: Quasar Electron Builder Action
-author: Vedaprakash M S
+author: Sam Groveman
 description: GitHub Action for building and releasing Electron apps specifically for Quasar framework
 
 branding:

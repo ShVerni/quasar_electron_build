@@ -19,15 +19,15 @@ This is a modified work of https://github.com/samuelmeuli/action-electron-builde
 
        steps:
          - name: Check out Git repository
-           uses: actions/checkout@v1
+           uses: actions/checkout@v5
 
          - name: Install Node.js, NPM and Yarn
-           uses: actions/setup-node@v1
+           uses: actions/setup-node@v6
            with:
-             node-version: 10
+             node-version: 24
 
          - name: Build/release Electron app
-           uses: samuelmeuli/action-electron-builder@v1
+           uses: shverni/action-electron-builder@v1
            with:
              # GitHub token, automatically provided to the action
              # (No need to define this secret in the repo settings)
