@@ -27,7 +27,7 @@ This is a modified work of https://github.com/vedaprakashms/quasar_electron_buil
              node-version: 24
 
          - name: Build/release Electron app
-           uses: shverni/action-electron-builder@v1
+           uses: ShVerni/quasar_electron_build@v0.0.1
            with:
              # GitHub token, automatically provided to the action
              # (No need to define this secret in the repo settings)

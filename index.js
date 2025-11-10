@@ -113,7 +113,7 @@ const runAction = () => {
 
   log(`Installing dependencies using ${useNpm ? "NPM" : "Yarn"}…`);
   run(useNpm ? "npm install" : "yarn", pkgRoot);
-    log(`Installing quasar using ${useNpm ? "NPM" : "Yarn"}…`);
+  log(`Installing quasar using ${useNpm ? "NPM" : "Yarn"}…`);
   run(useNpm ? "npm i -g @quasar/cli" : "yarn global add @quasar/cli", pkgRoot);
 
   // Run NPM build script if it exists
@@ -137,24 +137,17 @@ const runAction = () => {
   const cmd = useVueCli
     ? "vue-cli-service electron:build"
     : "quasar build -m electron";
-  for (let i = 0; i < maxAttempts; i += 1) {
-    try {
-      run(
-        `${cmd} --${platform} ${
-          release ? "--publish always" : ""
-        } ${args}`,
-        appRoot
-      );
-      break;
-    } catch (err) {
-      if (i < maxAttempts - 1) {
-        log(`Attempt ${i + 1} failed:`);
-        log(err);
-      } else {
-        throw err;
-      }
-    }
+  try {
+    run(
+      `${cmd} --${platform} ${
+        release ? "--publish always" : ""
+      } ${args}`,
+      appRoot
+    );
+  } catch (err) {   
+    log(err);
+    throw err;
   }
-};
+}
 
 runAction();
