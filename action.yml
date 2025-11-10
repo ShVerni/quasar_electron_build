@@ -1,10 +1,10 @@
-name: Quasar Electron Builder Action
+name: Quasar Electron Publisher Action
 author: Sam Groveman
 description: GitHub Action for building and releasing Electron apps specifically for Quasar framework
 
 branding:
   icon: briefcase
-  color: blue
+  color: red
 
 inputs:
   github_token:

@@ -1,6 +1,6 @@
 # Quasar Electron Builder Action
 
-This is a modified work of https://github.com/samuelmeuli/action-electron-builder so that it can support Quasar framework.
+This is a modified work of https://github.com/vedaprakashms/quasar_electron_build so that it can support modern NPM.
 
 3. **Add a workflow file** to your project (e.g. `.github/workflows/build.yml`):
 
