@@ -1,6 +1,6 @@
 # Quasar Electron Builder Action
 
-This is a modified work of https://github.com/vedaprakashms/quasar_electron_build so that it can support modern NPM.
+This is a modified work of https://github.com/vedaprakashms/quasar_electron_build so that it can support modern NPM and with the [Fabrica-IO](https://fabrica-io.com) project.
 
 3. **Add a workflow file** to your project (e.g. `.github/workflows/build.yml`):
 
@@ -24,10 +24,10 @@ This is a modified work of https://github.com/vedaprakashms/quasar_electron_buil
          - name: Install Node.js, NPM and Yarn
            uses: actions/setup-node@v6
            with:
-             node-version: 24
+             node-version: 25
 
          - name: Build/release Electron app
-           uses: ShVerni/quasar_electron_build@v0.0.1
+           uses: ShVerni/quasar_electron_build@v0.0.3
            with:
              # GitHub token, automatically provided to the action
              # (No need to define this secret in the repo settings)
