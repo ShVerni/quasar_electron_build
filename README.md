@@ -1,6 +1,6 @@
 # Quasar Electron Builder Action
 
-This is a modified work of https://github.com/vedaprakashms/quasar_electron_build so that it can support modern NPM and with the [Fabrica-IO](https://fabrica-io.com) project.
+This is a modified work of https://github.com/vedaprakashms/quasar_electron_build so that it can support modern NPM and work with the [Fabrica-IO](https://fabrica-io.com) project.
 
 3. **Add a workflow file** to your project (e.g. `.github/workflows/build.yml`):
 
