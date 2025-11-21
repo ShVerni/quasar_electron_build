@@ -103,11 +103,13 @@ const runAction = () => {
   if (platform === "mac") {
     setEnv("CSC_LINK", getInput("mac_certs"));
     setEnv("CSC_KEY_PASSWORD", getInput("mac_certs_password"));
+    log("Fixing esptool permissions...");
     run("chmod +x esptool*", pkgRoot + "/public/");
   } else if (platform === "windows") {
     setEnv("CSC_LINK", getInput("windows_certs"));
     setEnv("CSC_KEY_PASSWORD", getInput("windows_certs_password"));
   } else if (platform === "linux") {
+    log("Fixing esptool permissions...");
     run("chmod +x esptool*", pkgRoot + "/public/");
   }
 
